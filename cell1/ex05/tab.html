@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Two-Cell Table</title>
+
+    <style>
+      :root { font-family: system-ui, sans-serif; }
+
+      /* keep table centred and responsive */
+      table {
+        margin: 2rem auto;
+        border-collapse: collapse;
+        width: clamp(200px, 80%, 600px);
+      }
+
+      td {
+        padding: 2rem;
+        text-align: center;
+        font-size: 1.25rem;
+        color: #fff;      /* white text for contrast */
+      }
+
+      /* cell-specific colours */
+      .left  { background: #0077b6; }  /* deep blue */
+      .right { background: #ff6b6b; }  /* coral red */
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <td class="left">Hello from the left&nbsp;cell</td>
+        <td class="right">Greetings from the right&nbsp;cell</td>
+      </tr>
+    </table>
+  </body>
+</html>

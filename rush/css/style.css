@@ -1,0 +1,4 @@
+/* small custom tweaks */
+html,body{scroll-behavior:smooth;}
+.navbar-brand{font-weight:700;}
+.section-pad{padding:5rem 0;}

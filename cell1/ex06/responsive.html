@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Two-Cell Table</title>
+
+    <style>
+      :root { font-family: system-ui, sans-serif; }
+
+      /* --- Page wrapper so the table covers entire viewport --- */
+      body, html {
+        margin: 0;
+        min-height: 100vh;   /* table never floats mid-page */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f5f5f5;
+      }
+
+      /* --- Table styling (copied from ex05, tweaked) --- */
+      table {
+        width: 100%;                /* always spans full width */
+        max-width: 900px;           /* but don’t exceed 900 px for readability */
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 2rem 1rem;
+        text-align: center;
+        font-size: 1.4rem;
+        color: #fff;
+      }
+
+      .left  { background: #0077b6; }
+      .right { background: #ff6b6b; }
+
+      /* --- Make cells stack vertically on very narrow screens (<500 px) --- */
+      @media (max-width: 500px) {
+        tr   { display: flex; flex-direction: column; }
+        td   { width: 100%; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <td class="left">Hello from the left&nbsp;cell</td>
+        <td class="right">Greetings from the right&nbsp;cell</td>
+      </tr>
+    </table>
+  </body>
+</html>
